@@ -1,0 +1,258 @@
+@import 'color'
+
+.header-menu
+  height: 72px
+  display: flex
+  align-items: center
+
+.cls-menu
+  fill: $menu-icon
+
+nav[role=navigation] 
+  font-family: futura-pt,sans-serif
+  font-weight: 100
+  // text-align: center
+  text-transform: uppercase
+
+.menu-grid
+  display: grid
+  grid-template-columns: 1fr 1fr 10fr 1fr
+
+.menu-grid-2
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  align-items: center
+
+ul 
+  padding: 0em!important
+  margin: 0!important
+
+li 
+  list-style: none
+
+
+li.top-level-list-item 
+  // position: relative
+  // display: inline-block
+  // width: 10%
+  // border-right: 4px solid white
+
+.top-level-list-item
+  text-align: center
+  >a:hover
+    text-decoration: none
+
+.logo-link
+  padding: 0px 10px
+
+.top-level-link
+  >p
+    color: $menu-icon
+    font-size: 10px
+    padding-top: 10px
+
+li:last-child 
+  border-right: none
+
+.hv-100
+  height: 100vh
+
+.dropdown-category 
+  opacity: 0
+  width: 97%
+  padding: 0px
+  background: white
+  position: absolute
+  top: 100px
+  left: 0
+  display: none
+  margin-top: 30px
+  height: 80vh
+  overflow: hidden
+
+.dropdown-open ~ .dropdown-category 
+  display: block!important
+  opacity: 1
+  margin-left: 1.5%
+
+.dropdown-open:after 
+  display: block
+  top: auto
+  content: ""
+  position: absolute
+  pointer-events: none
+  border: solid transparent
+  border-bottom-color: $negro
+  border-width: 20px
+  left: 45px
+  top: 55px
+  margin-top: 35px
+
+.icon-menu
+  width: 35px
+
+.icon-logo
+  width: 120px
+
+.icon-lupa
+  width: 30px
+
+.bg-menu
+  border-radius: 15px
+
+.icon-user
+  width: 45px
+
+.grid-azucar
+  display: grid
+  grid-template-columns: 3fr 9fr
+
+
+// search
+.close-search
+  position: absolute
+  top: 25px
+  right: 25px
+  color: white
+  opacity: 9!important
+
+.search-modal
+  border-bottom: 1px solid #fff
+  width: 100%
+  text-align: left
+  color: white!important
+
+.search-modal::placeholder
+  color: white
+
+.modal-search
+  background-color: transparent!important
+  border: 1px solid transparent
+  height: 500px
+  display: flex
+
+.modal-backdrop.show
+  opacity: 0.8
+
+.modal-backdrop 
+    backdrop-filter: blur(6px)!important
+// menu chevere
+
+@keyframes show
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@keyframes openMenu
+  0%
+    transform: translateX(-15px)
+    border-top-left-radius: 0
+    border-bottom-right-radius: 0
+    width: 0px
+  30%
+    transform: translateX(0)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    width: 0px
+  50%
+    transform: translateX(0)
+    border-top-left-radius: 100%
+    border-bottom-left-radius: 100%
+    width: 100px
+  80%
+    transform: translateX(0)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    width: 95px
+  100%
+    transform: translateX(0)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    width: 100%
+
+.bg-carrito-chevere
+  background-color: #f7f7f7
+
+.menu
+  // padding: 7px
+  width: 0px
+  height: 100vh
+  top: 0
+  position: fixed
+  right: 0
+  background-color: #f2f2f2
+  
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-end
+  
+  transform: translateX(14px)
+  transition: all 300ms
+  &__button
+    width: 40px
+    height: 40px
+    
+    margin-bottom: 15px
+    
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    cursor: pointer
+    
+    background-color: $plomo
+    
+    transform: translateX(-7px)
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+    i
+      font-size: 20px
+  &__wrapper
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    width: 20px
+    top: 72px
+  .menu__item
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    
+    width: 100%
+    
+    margin-bottom: 5px
+    .icon
+      margin-right: 5px
+      font-size: 20px
+      width: 23px
+    span
+      opacity: 0
+  &.active
+    animation: openMenu 400ms ease-in-out forwards
+    // width: 200px
+    .menu__wrapper
+      width: calc(100% - 0px)
+      animation: show 300ms ease-in-out 300ms forwards
+      .menu__item
+        span
+          animation: show 300ms ease-in-out 350ms forwards
+          
+.active
+  z-index: 1000
+  .menu__button
+    display: none
+    transform: translateX(-471px)
+
+.boton-cheverisimo
+  width: 65px
+  height: 50px
+  margin-bottom: 15px
+  border-radius: 7px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  background-color: $gray
+  transform: translateX(-7px)

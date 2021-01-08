@@ -1,0 +1,1011 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap')
+@import 'color'
+@import 'menu'
+@import 'payment'
+
+// datos cabecera
+$fuente-datos: 12px
+
+// tarjeta de productos
+$card-title: 16px
+$card-description: 12px
+$card-detalle: 11px
+$card-stock: 12px
+$precio-unico: 14px
+$precio-descuento: 18px
+
+// pagina
+$description-loby: 14px
+
+// Carrito
+$sku: 10px
+$titulo-items: 12px
+$items-description: 10px
+$items-descuento: 15px
+
+body
+    font-family: 'Poppins', sans-serif!important
+    // font-size: 13px!important
+    background-color: $body
+
+.cambio
+    display: none!important
+
+.grid-ecommerce
+    display: grid
+    grid-template-columns: 75% 25%
+
+.grid-login
+    display: grid
+    grid-template-columns: 100%
+
+.card-grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+
+.filtros
+    >div
+        >a
+            font-size: 12px
+
+.relative
+    position: relative
+
+.img-container
+    height: 200px
+
+.object-contain
+    object-fit: contain
+
+.add-position
+    position: absolute
+    right: 15px
+    top: 10px
+    z-index: 1
+
+.off
+    filter: grayscale(1)
+
+.sinStock
+    position: absolute
+    top: 50%
+    background: #21252999
+    width: 100%
+    text-align: center
+    color: #ffffff
+    padding: 8px
+    font-weight: 600
+    >p
+        font-size: $card-stock
+
+.bg-sinStock
+    background-color: #343a40!important
+    width: 100%
+    position: absolute
+    top: 0
+    height: 200px
+    opacity: 0.3
+    z-index: 1
+
+.drop-responsive
+    transform: translate3d(-134px, 59px, 0px)!important
+
+.sin-stock
+    background: gray
+    color: white
+    padding: 5px 10px
+    border-radius: 15px
+    font-size: 12px
+
+.categorias
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 135px
+    border-radius: 5px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+.categoria-marco
+    border-radius: 5px
+    background: #65656585
+    height: 100%
+    width: 100%
+
+.text-gray
+    color: #ccc
+
+.category-text-position
+    color: white
+    font-weight: 700
+    font-size: 19.5px
+    text-align: center
+    line-height: 1
+
+.xzoom3
+    width: 100%!important
+
+.btn-gray
+    color: #fff
+    background-color: $gray
+    border-color: $gray
+
+.btn-elements
+    color: #fff
+    background-color: $plomo
+    border-color: $plomo
+    font-size: 12px
+    border-radius: 15px
+
+.border-input
+    border-radius: 5px
+
+.input-gray
+    background-color: #ababab!important
+    color: #fff!important
+
+.input-plush
+    background-color: $plomo!important
+    color: #fff!important
+    border: 1px solid $plomo!important
+    border-radius: 0px!important
+    height: 30px
+    padding: 0
+    margin: 0
+    width: 40px
+
+.border-right-none
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    border-top-left-radius: 15px
+    border-bottom-left-radius: 15px
+
+.border-left-none
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
+
+.btn-gray-card
+    color: #fff
+    background-color: $plomo
+    border-color: $plomo
+    transition: all .3s ease
+    &:hover
+        color: #fff
+        filter: opacity(75%)
+
+.btn-regresar
+    color: #fff
+    background-color: $gray
+    border-color: $gray
+    padding: 6px 20px
+    transition: all .3s ease
+    &:hover
+        color: #fff
+        filter: opacity(75%)
+
+.btn-back-sm
+    color: #fff
+    background-color: #5052f0
+    border-color: #5052f0
+    padding: 6px 20px
+    transition: all .3s ease
+    &:hover
+        color: #fff
+        filter: opacity(75%)
+
+.xzoom-thumbs
+    >a
+        >img
+            width: 65px
+
+.d-action
+    display: grid
+    grid-template-columns: 45% 45%
+    >div
+        padding: 1em
+        >select
+            font-size: 14px
+        >input
+            font-size: 14px
+        >div
+            >input
+                font-size: 14px
+        >a
+            font-size: 14px
+
+.padding-top-0
+    padding-top: 0!important
+
+.btn-white
+    color: #000
+    // background-color: $white
+    border-color: $plomo
+    padding: 6px 20px
+    transition: all .3s ease
+
+.btn-plomo
+    color: #fff
+    background-color: $plomo
+    border-color: $plomo
+    padding: 6px 20px
+    transition: all .3s ease
+    &:hover
+        color: #fff
+        filter: opacity(75%)
+
+.title-producto
+    color: #212529
+    font-size: 1.5em
+    font-weight: 500
+    margin: 0
+
+.card-text
+    >span
+        font-size: $precio-unico
+        text-decoration: line-through
+        padding: 5px
+    >p
+        margin: 0
+        font-size: $precio-descuento
+        font-weight: 600
+        color: #e61919
+        padding: 5px
+
+.carrito-text
+    >span
+        text-decoration: line-through
+        padding: 5px
+    >p
+        margin: 0
+        font-weight: 600
+        color: #e61919
+        padding: 5px
+
+.carrito
+    width: 20px
+    margin-right: 10px
+
+.transparent
+    background: transparent!important
+    border: transparent!important
+
+.transparent:focus
+    box-shadow: 0 0 0 0.2rem #d81c1c00
+
+.btn-add
+    background-color: $add
+    border: 1px solid $add
+    padding: 7px 25px
+    color: #fff
+
+.btn-form
+    background-color: $plomo
+    border: 1px solid $plomo
+    padding: 12px 100px
+    color: white
+    transition: all .3s ease
+    &:hover
+        color: white
+        opacity: .5
+
+.full-weight
+    width: -webkit-fill-available
+
+.card-img-top
+    object-fit: contain
+    height: 200px
+
+.margin-section
+    margin-top: 110px
+
+.carrrito-vacio
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    >div
+        >p
+            font-size: 16px
+            font-weight: 500
+
+.compra
+    border: 1px solid $plomo
+    height: 100vh
+    margin-top: 110px
+    position: fixed
+    right: 0
+    width: 25%
+    background-color: $white
+
+.compra
+    >div>div
+        >a
+            font-size: 16px
+            padding: 8px 20px
+            transition: all .3s ease
+            color: $white!important
+            background-color: $gray
+            &:hover
+                color: $white!important
+                filter: opacity(75%)
+                text-decoration: none
+
+.detalle
+    >div>div
+        >a
+            font-size: 16px
+            padding: 8px 20px
+            transition: all .3s ease
+            color: $white
+            background-color: $gray
+            &:hover
+                filter: opacity(75%)
+                text-decoration: none
+
+.grid-carrito-list
+    display: grid
+    grid-template-columns: 1.5fr 3fr 25px
+    align-items: center
+    >div
+        >i
+            font-size: 18px
+
+.header-carrito
+    height: 50px
+    background-color: $carrito
+
+.barra-filtros
+    min-height: 50px
+    display: grid
+    grid-template-columns: 13fr 1fr
+    >div
+        >div
+            padding: 0 5px
+
+.body-carrito
+    flex: 1 1 auto
+    height: 66vh
+    overflow-y: scroll
+
+hr
+    margin-top: .5rem
+    margin-bottom: .5rem
+
+.items-card
+    >small
+        font-size: $sku
+    >p
+        font-size: $titulo-items
+    >.items-description
+        font-size: $items-description
+    >div
+        >.btn-items
+            color: #fff
+            background-color: $plomo
+            border-color: $plomo
+            padding: 6px 16px!important
+            font-size: 10px!important
+    >div
+        >p
+            font-size: $items-descuento
+
+.footer-carrito
+    border-top: 1px solid $plomo
+    position: absolute
+    width: 100%
+    bottom: 108px
+
+.bg-plomo
+    background-color: $plomo
+
+.bg-gray
+    background-color: $gray
+
+.bg-negro
+    background-color: $cinta
+    >div
+        >p
+            color: #fff
+            font-size: $fuente-datos
+            padding: 1em
+        >a
+            color: #fff
+            font-size: $fuente-datos
+            padding: 1em
+            &:hover
+                text-decoration: none
+.fixed-top
+    >.bg-negro
+        height: 38px
+
+.descripcion
+    font-size: $card-description
+
+.description-loby
+    font-size: $description-loby
+
+.stock
+    background-color: #ababab
+    color: white
+    padding: 8px 25px
+    border-radius: 20px
+    margin-bottom: 20px
+    font-size: $card-stock
+
+.baselina
+    display: flex
+    align-self: baseline
+
+.breadcrumb-paqari
+    display: -ms-flexbox
+    font-size: 12px!important
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    padding: .75rem 1rem
+    margin-bottom: 0
+    list-style: none
+    border-radius: .25rem
+
+.breadcrumb-link+.breadcrumb-link
+    padding-left: .5rem
+
+.breadcrumb-link+.breadcrumb-link::before
+    display: inline-block
+    padding-right: .5rem
+    color: #6c757d
+    content: ">"
+    font-weight: 600
+
+// Bootstrap
+
+.dropdown-toggle
+    color: #000
+    font-size: 12px
+
+.card-title
+    font-size: $card-title
+
+.detalles-datos > div:nth-child(even)
+    background-color: #eee
+    padding: 1em
+
+.detalles-datos
+    border: 2px solid #eee
+    font-size: 12px
+    >div
+        padding: 1em
+
+.position-stock-single
+    position: absolute
+    top: 0
+    right: 0
+
+.text-negro
+    color: $negro
+
+// input
+*,*::before,*::after
+    box-sizing: border-box
+.box
+    padding-top: 20px
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    font-family: sans-serif
+    font-weight: 300
+    font-size: 16px
+    line-height: 1.5
+
+.box > *
+    font-size: inherit
+    line-height: inherit
+
+.label
+    position: absolute
+    width: auto
+    top: 0
+    order: -1
+    flex: 1 1 100%
+    color: #333
+    cursor: pointer
+    transform-origin: left
+    transform: scale(0.75,0.75)
+    transition: transform .25s, color .25s
+    pointer-events: none
+
+.input
+    flex: 1 1 auto
+    min-width: 0%
+    padding: 2px 0
+    border: 0
+    appearance: none
+    outline: 0
+
+.input-border::after
+    position: absolute
+    width: 100%
+    height: 4px
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+    bottom: 0
+    left: 0
+    content: ''
+    transition: box-shadow .25s
+
+.input:focus ~ .input-border::after,
+.input:active ~ .input-border::after
+    box-shadow: 0 4px 0 0 rgba(0,0,128,.1)
+
+.input:required:invalid:not(:focus) ~ .label
+    color: #888
+    transform: translate3d(0,20px,0)
+
+.input:required:invalid
+    box-shadow: none
+
+.input-decorator
+    flex: 0 0 auto
+
+.input-decorator+.input
+    padding-left: .5em
+
+.input + .input-decorator
+    padding-left: .5em
+
+.point
+    width: 25px
+
+footer
+    background-color: $footer
+
+.footer-title
+    font-weight: 600
+    color: $text-footer
+
+.footer-texto
+    text-align: center
+
+.icon-contact
+    width: 40px
+    display: flex
+    justify-content: center
+
+.contactos
+    >div
+        >div
+            >i
+                color: $text-footer
+
+        >a
+            font-size: 14px
+            color: $text-footer
+            font-weight: 600
+.st0
+    fill: $paqari-logo
+
+.bolso-2
+    fill: white
+
+.target-items
+    height: 20px
+    width: 20px
+    position: absolute
+    background: #e81919
+    border-radius: 50%
+    top: -7px
+    left: -7px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: white
+    font-size: small
+
+.cls-compay
+    fill: $cliente-logo
+
+.cls-delivery, .cls-tienda
+    fill: #000
+    &:hover
+        fill: #fff
+
+.cls-caja
+    fill: #000
+
+.grid-items:hover .cls-delivery
+    fill: #fff
+
+.grid-items:hover .cls-tienda
+    fill: #fff
+
+.font-15
+    font-size: 15px
+
+.font-18
+    font-size: 18px
+
+.font-25
+    font-size: 25px
+
+.address
+    padding: 0 13px
+    font-size: 14px
+    font-weight: 600
+    color: $text-footer
+
+.datos
+    >p
+        font-size: 14px
+        font-weight: 600
+        color: $text-footer
+
+.circle-social
+    margin: 2px
+    flex-wrap: wrap
+    >a
+        >.socializado
+            color: $social-color
+            background: $social-background
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 50px
+            width: 50px
+            padding: .8em
+.sizeContactIcon
+    color: white
+    font-size: 25px
+    
+.bg-sku
+    background-color: $bg-sku
+
+.bg-detalle
+    background-color: $bg-detalle
+
+.paqari
+    width: 100%
+
+.carrito-chevere
+    height: 65vh
+    overflow: hidden
+    overflow-y: scroll
+
+.close-chevere
+    color: $gray
+    font-size: 14px
+    text-decoration: underline
+
+.padding-sign
+    padding: 1em
+
+.btn-cool-procesar
+    font-size: 16px
+    padding: 5px 20px
+    transition: all .3s ease
+    color: #fff
+    background-color: #5052f0
+    text-decoration: none
+    width: 85%
+    margin-top: 15px
+    border-radius: 5px
+    &:hover
+        color: #fff
+        text-decoration: none
+
+.cheverisimo
+    position: fixed
+    bottom: 10px
+    left: 28px
+    z-index: 2
+
+.position-precesar-bottom
+    position: absolute
+    bottom: 24px
+    background: white
+    width: 100%
+
+.icon-right
+    font-size: 30px!important
+    color: $plomo
+
+.content-right
+    display: none
+
+.padding-option
+    padding: 0 1rem 1rem
+
+.img-slider
+    // height: 350px
+    object-fit: contain
+
+.banner
+    display: block
+
+.sm-banner
+    display: none
+
+.owl-nav
+    position: absolute
+    top: calc(0px + 30%)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    >.owl-prev
+        >span
+            font-size: 55px
+            margin-left: 25px
+    >.owl-next
+        >span
+            font-size: 55px
+            margin-right: 25px
+
+.owl-theme .owl-nav [class*=owl-]:hover
+    background: transparent!important
+    color: $gray!important
+
+.card-mobile
+    overflow: hidden
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+    color: #495057!important
+    background-color: #f7f7f7!important
+    border-color: #dee2e6!important
+
+.padding-navigation
+    padding: 1em 0!important
+
+.nav-tabs .nav-link
+    color: #495057
+
+.iconos-navegacion
+    width: 23px
+    margin-right: 8px
+
+.font-label
+    font-size: 12px
+
+.tag-confirmado
+    background: #f8f9fa
+    padding: 5px
+    text-align: center
+    font-weight: 500
+
+.tag-pendiente
+    background: #ababab
+    padding: 5px
+    text-align: center
+    font-weight: 500
+
+.title-addres
+    font-weight: 500
+
+.grid-direccion
+    display: grid
+    grid-template-columns: 1fr 10fr 6fr
+
+.img-map
+    height: 150px
+    object-fit: cover
+    width: 100%
+
+.contactenos
+    >div
+        >a
+            color: #212529
+            display: flex
+            align-items: center
+            margin-top: 15px
+            word-break: break-word
+            >i
+                margin-right: 10px
+                font-size: x-large
+            &:hover
+                color: #212529
+                text-decoration: none
+
+.sociales-contact
+    >.d-flex
+        >div
+            >a
+                color: #212529
+                display: flex
+                align-items: center
+                margin-top: 15px
+                >i
+                    margin-right: 10px
+                    font-size: x-large
+                &:hover
+                    color: #212529
+                    text-decoration: none
+
+.device, .device-back
+    display: none
+
+.device-back
+    width: 100%
+    padding: 1em
+
+.device-icon
+    background: #4d4d4d
+    width: 100px
+    height: 100px
+    padding: 1em
+    border-radius: 7px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.grid-device
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    >li
+        margin: 8px!important
+
+#direccionEntrega-error,
+#fechaEntrega-error
+    position: absolute
+    top: 45px
+    color: #dc3545
+    border-radius: 50%
+    padding: 1px 10px
+    text-align: center
+    height: 30px
+    width: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    right: 0
+
+.error
+    >a
+        >svg
+            >g
+                >g
+                    >.cls-caja
+                        fill: #fff!important
+
+@media screen and (min-width: 320px) and (max-width: 443px)
+    .banner
+        display: none
+
+    .card-grid
+        grid-template-columns: 1fr!important
+
+    .w-50
+        width: 100%!important
+
+    .d-action
+        display: grid
+        grid-template-columns: 1fr
+
+    .btn-add
+        width: 100%
+
+    .barra-filtros
+        display: none
+
+    .margin-section
+        margin-top: 72px
+
+    .btn-regresar
+        display: none
+
+    .detalles-datos, .sin-stock
+        font-size: 12px
+
+    .sm-banner
+        display: block
+
+    .device
+        display: block
+
+    .descktop, .descktop-option
+        display: none
+
+@media screen and (min-width: 443px) and (max-width: 634px)
+    .banner
+        display: none
+
+    .card-grid
+        grid-template-columns: 1fr 1fr
+
+    .w-50
+        width: 100%!important
+
+    .barra-filtros
+        display: none
+
+    .margin-section
+        margin-top: 72px
+
+    .btn-regresar
+        display: none
+
+    .title-producto
+        font-size: 16px
+
+    .sm-banner
+        display: block
+
+    .device
+        display: block
+
+    .descktop, .descktop-option
+        display: none
+
+@media screen and (min-width: 634px) and ( max-width: 930px )
+    .filtros
+        display: none !important
+
+    .card-grid
+        grid-template-columns: 1fr 1fr 1fr
+
+    .title-producto
+        font-size: 16px
+
+    .banner
+        display: block
+
+    .device
+        display: block
+
+    .descktop, .descktop-option
+        display: none
+
+@media screen and (min-width: 300px) and ( max-width: 500px )
+    .grid-ecommerce
+        grid-template-columns: 1fr
+        display: block
+
+    .title-producto
+        font-size: 16px
+
+    .card-mobile
+        display: grid
+        grid-template-columns: 2fr 3fr 35px
+        align-items: center
+
+    .display-sm-block
+        display: block!important
+        text-align: left!important
+
+    .card-title
+        margin-top: 19px
+
+    .card-body
+        >.descripcion
+            display: none
+
+    .card-text
+        font-size: 12px
+
+    .content-right
+        display: block
+
+    .carousel
+        display: none
+
+    .banner
+        display: none
+
+@media screen and (min-width: 500px) and ( max-width: 991px )
+    .grid-ecommerce
+        display: block
+        grid-template-columns: 1fr
+
+    .btn-white, .btn-plomo
+        font-size: 12px
+
+    .footer-texto
+        text-align: left
+
+    .margin-section
+        margin-top: 72px
+
+@media screen and ( min-width: 991px ) and ( max-width: 1280px )
+    .btn-white, .btn-plomo
+        font-size: 12px

@@ -1,19 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/sass/main.sass";
+import "./assets/sass/style.sass";
 import "./assets/styles/styles.css";
-import Logo from "./assets/images/react-icons.svg";
+import { TiendaApp } from "./TiendaApp";
+import { AppRouters } from "./routers/AppRouters";
 
 function App() {
   return (
-    <div className="container">
-      <div className="react-model">
-        <div>
-          <img src={Logo} className="iconos" alt="" />
-          <p className="color">Bienvenido a tu proyecto de ReactJs</p>
-        </div>
-      </div>
-    </div>
+    <>
+    <AppRouters/>
+    </>
   );
 }
 
