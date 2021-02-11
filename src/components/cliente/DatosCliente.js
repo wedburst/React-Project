@@ -56,7 +56,7 @@ export const DatosCliente = () => {
   };
 
   return (
-    <div className="container mb-5">
+    <div className="container mb-5 padding-sign">
       <div className="row d-flex justify-content-center">
         <div className="col-sm-12 col-md-8 mt-5">
           <div className="border bg-white">

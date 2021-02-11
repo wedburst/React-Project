@@ -1,19 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
+import { ItemsLleno } from "../carrito/ItemsLleno";
+import { ItemsVacio } from "../carrito/ItemsVacio";
 
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhoneAlt,
+  faEnvelope,
+  faClosedCaptioning,
+  faTimes,
+  faSearch,
+  faPlus,
+  faMinus,
+} from "@fortawesome/free-solid-svg-icons";
 
 import {
   faWhatsapp,
   faFacebook,
   faInstagram,
+  faXbox,
 } from "@fortawesome/free-brands-svg-icons";
 
 // images svg
 import Lupa from "../../assets/images/svg/lupa.svg";
+import Carrito from "../../assets/images/svg/carrito.svg";
+
 export const Navegacion = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const loading = false;
+
+  const [active, setActive] = useState(false);
+
+  
+
+  const handleInactive = () => {
+    const close = document.querySelector('.menu');
+    close.classList.remove('active');
+  };
+
   return (
     <>
       <div class="d-none d-lg-block d-xl-block">
@@ -173,6 +202,9 @@ export const Navegacion = () => {
           </div>
         </div>
       </div>
+
+      {/* manu responsive */}
+
       <div class="d-xs-block d-sm-block d-lg-none d-xl-none">
         <div class="fixed-top">
           <div class="bg-gray header-menu">
@@ -290,7 +322,13 @@ export const Navegacion = () => {
                 </a>
                 <div>
                   <div>
-                    <a href="#" data-toggle="modal" data-target="#search">
+                    <a
+                      href="#"
+                      variant="primary"
+                      onClick={handleShow}
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32.62 32.63"
@@ -319,6 +357,67 @@ export const Navegacion = () => {
           </div>
         </div>
       </div>
+
+      {/* modal */}
+      <Modal show={show} onHide={handleClose} className="modal-paqari">
+        <Modal.Header >
+          <a onClick={handleClose} className="close-search" closeButton>
+            <FontAwesomeIcon icon={faTimes} />
+          </a>
+        </Modal.Header >
+        <Modal.Body className="bg-transparent modal-search">
+          <div class="w-100 d-flex align-items-center">
+            <input
+              type="search"
+              name="search"
+              id="seach"
+              placeholder="¿Qué producto estas buscando?"
+              class="btn search-modal"
+            />
+            <a href="#">
+              <FontAwesomeIcon icon={faSearch} className="text-white" />
+            </a>
+          </div>
+        </Modal.Body>
+      </Modal>
+
+
+      {/* menu chevere */}
+
+      <div class="d-xs-block d-sm-block d-lg-none d-xl-none">
+        <div class="menu">
+            <div class="menu__wrapper">
+                <div class="d-flex justify-content-between align-items-center ">
+                    <div class="d-flex justify-content-between p-2 align-items-center w-100" style={{fontSize: '14px'}}>
+                        <div><img src={Carrito} className="carrito" alt="carrito" /> 0: Productos</div>
+                        <div>Mínimo s/ 200</div>
+                    </div>
+                    <div class="p-3">
+                        <FontAwesomeIcon icon={faTimes} className="close-chevere" onClick={handleInactive}/>
+                    </div>
+                </div>
+                <div class="carrito-chevere bg-white">
+                {loading ? <ItemsLleno/> : <ItemsVacio />}
+                    <hr/>
+                </div>
+                <div class="">
+                    <div class="">
+                        <div class="d-flex justify-content-center w-100">
+                            <a href="datos-clientes.html" class="btn-block d-flex justify-content-between btn-cool-procesar disabled">
+                                PROCESAR COMPRA
+                                <span>S/ 00.00</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2">
+                        <a href="#" class="close-chevere">
+                            Seguir comprando
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </>
   );
 };

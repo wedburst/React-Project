@@ -8,7 +8,7 @@
 .cls-menu
   fill: $menu-icon
 
-nav[role=navigation] 
+nav[role=navigation]
   font-family: futura-pt,sans-serif
   font-weight: 100
   // text-align: center
@@ -23,15 +23,14 @@ nav[role=navigation]
   grid-template-columns: 1fr 1fr 1fr
   align-items: center
 
-ul 
+ul
   padding: 0em!important
   margin: 0!important
 
-li 
+li
   list-style: none
 
-
-li.top-level-list-item 
+li.top-level-list-item
   // position: relative
   // display: inline-block
   // width: 10%
@@ -51,13 +50,13 @@ li.top-level-list-item
     font-size: 10px
     padding-top: 10px
 
-li:last-child 
+li:last-child
   border-right: none
 
 .hv-100
   height: 100vh
 
-.dropdown-category 
+.dropdown-category
   opacity: 0
   width: 97%
   padding: 0px
@@ -70,12 +69,12 @@ li:last-child
   height: 80vh
   overflow: hidden
 
-.dropdown-open ~ .dropdown-category 
+.dropdown-open ~ .dropdown-category
   display: block!important
   opacity: 1
   margin-left: 1.5%
 
-.dropdown-open:after 
+.dropdown-open:after
   display: block
   top: auto
   content: ""
@@ -107,36 +106,45 @@ li:last-child
   display: grid
   grid-template-columns: 3fr 9fr
 
-
 // search
 .close-search
-  position: absolute
-  top: 25px
-  right: 25px
-  color: white
+  position: absolute!important
+  top: 0!important
+  right: 25px!important
+  color: white!important
   opacity: 9!important
 
 .search-modal
-  border-bottom: 1px solid #fff
-  width: 100%
-  text-align: left
+  border-bottom: 1px solid #fff!important
+  width: 100%!important
+  text-align: left!important
   color: white!important
 
 .search-modal::placeholder
-  color: white
+  color: white!important
 
 .modal-search
   background-color: transparent!important
-  border: 1px solid transparent
-  height: 500px
-  display: flex
+  border: 1px solid transparent!important
+  height: 500px!important
+  display: flex!important
 
 .modal-backdrop.show
-  opacity: 0.8
+  opacity: 0.8!important
 
-.modal-backdrop 
-    backdrop-filter: blur(6px)!important
+.modal-backdrop
+  backdrop-filter: blur(6px)!important
 // menu chevere
+
+.bg-transparent
+  background-color: transparent
+
+.modal-paqari
+  >div
+    > .modal-content
+      background-color: transparent!important
+      >.modal-header
+        border-bottom: 1px solid transparent;
 
 @keyframes show
   0%
@@ -181,28 +189,28 @@ li:last-child
   position: fixed
   right: 0
   background-color: #f2f2f2
-  
+
   display: flex
   flex-direction: column
   justify-content: center
   align-items: flex-end
-  
+
   transform: translateX(14px)
   transition: all 300ms
   &__button
     width: 40px
     height: 40px
-    
+
     margin-bottom: 15px
-    
+
     display: flex
     justify-content: center
     align-items: center
-    
+
     cursor: pointer
-    
+
     background-color: $plomo
-    
+
     transform: translateX(-7px)
     border-top-left-radius: 10px
     border-bottom-left-radius: 10px
@@ -219,9 +227,9 @@ li:last-child
     flex-direction: row
     justify-content: flex-start
     align-items: center
-    
+
     width: 100%
-    
+
     margin-bottom: 5px
     .icon
       margin-right: 5px
@@ -238,7 +246,7 @@ li:last-child
       .menu__item
         span
           animation: show 300ms ease-in-out 350ms forwards
-          
+
 .active
   z-index: 1000
   .menu__button

@@ -5,7 +5,7 @@ import { ItemsVacio } from "./ItemsVacio";
 import carrito from "../../assets/images/svg/carrito.svg";
 import { CarritoResponsive } from "./CarritoResponsive";
 export const CarritoList = () => {
-  const loading = true;
+  const loading = false;
   return (
     <div>
       <div className="compra d-none d-lg-block d-xl-block">

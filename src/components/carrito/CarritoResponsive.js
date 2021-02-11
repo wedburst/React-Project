@@ -1,9 +1,14 @@
 import React from 'react'
 
+const handleActive = () => {
+    const menu = document.querySelector('.menu');
+    menu.classList.add('active')
+};
+
 export const CarritoResponsive = () => {
     return (
         <div class="cheverisimo d-xs-block d-sm-block d-lg-none d-xl-none">
-        <div class="boton-cheverisimo">
+        <div class="boton-cheverisimo" onClick={handleActive}>
             <div class="target-items">4</div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.41 71.25" height="20" widht="100%">
                 <title>bolso</title>
